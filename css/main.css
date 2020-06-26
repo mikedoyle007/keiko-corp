@@ -1,10 +1,3 @@
-@import "animate.css";
-@import "bootstrap.css";
-@import "owl.carousel.css";
-@import "owl.theme.css";
-@import "owl.transitions.css";
-
-
 /*		Fonts		*/
 @font-face {
     font-family: 'open_regular';
@@ -592,7 +585,7 @@ a.app_link{
 	font-size: 14px;
 }
 
-.#tslider{
+#tslider{
 	text-align: center!important;
 	position: relative!important;
 }
