@@ -245,7 +245,30 @@
 	<!--  End Footer Section  -->
 
 	<!-- Script Tags -->
-	<script type="text/javascript">
+	<script>
+		const stylesheets = [
+			"./css/bootstrap.css",
+			"./css/owl.transitions.css",
+			"./css/owl.carousel.css",
+			"./css/animate.css"
+		];
+    const loadStyleSheet = (src) =>{
+			if (document.createStyleSheet) {
+				document.createStyleSheet(src);
+			}
+			else {
+				const stylesheet = document.createElement('link');
+				stylesheet.href = src;
+				stylesheet.rel = 'stylesheet';
+				stylesheet.type = 'text/css';
+				document.getElementsByTagName('head')[0].appendChild(stylesheet);
+			}
+    }
+		window.onload = function () {
+			stylesheets.forEach(s => loadStyleSheet(s));
+		};
+	</script>
+	<!-- <script type="text/javascript">
 		const loadStylesheet = (src) => {
 			if (document.createStylesheet) {
 				document.createStylesheet(src);
@@ -263,7 +286,7 @@
 			loadStylesheet("./css/owl.carousel.css");
 			loadStylesheet("./css/owl.transitions.css");
 		};
-	</script>
+	</script> -->
 	<script type="text/javascript" src="js/jquery.js"></script>
 	<script type="text/javascript" src="js/ajaxchimp.js"></script>
 	<script type="text/javascript" src="js/owl.carousel.min.js"></script>
